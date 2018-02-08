@@ -1,7 +1,7 @@
 
 .LOGON 127.0.0.1/DBC,dbc;
-database vmtest;
-create table vmtest.emp_backup (
+database Prudhvi;
+create table Prudhvi.emp_backup (
 Id integer,
 name varchar(30),
 salary integer
@@ -10,15 +10,15 @@ unique primary index(id);
 
 .if errorcode <> 0 then .exit errorcode;
 
-select * from vmtest.test1;
+select * from Prudhvi.test1;
 
 .if activitycount <> 0 then .goto insertemployee;
 
-drop table vmtest.emp_backup;
+drop table Prudhvi.emp_backup;
 
 .label insertemployee;
 
 insert into emp_backup 
-select * from vmtest.test1;
+select * from Prudhvi.test1;
 . if errorcode <> 0 then .exit errorcode;
 .logoff;
