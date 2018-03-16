@@ -12,6 +12,8 @@ unique primary index(id);
 
 select * from Prudhvi.test1;
 
+select * from dummy;
+
 .if activitycount <> 0 then .goto insertemployee;
 
 drop table Prudhvi.emp_backup;
