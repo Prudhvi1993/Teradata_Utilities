@@ -24,3 +24,4 @@ insert into emp_backup
 select * from Prudhvi.test1;
 . if errorcode <> 0 then .exit errorcode;
 .logoff;
+/*# new data inserted logic added*/ 
